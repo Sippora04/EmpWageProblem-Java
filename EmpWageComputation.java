@@ -2,7 +2,7 @@ package com.employee;
 import java.util.Random;
 public class EmpWageComputation
 {
-	public static int totalEmpHours = 0;
+   public static int totalEmpHours = 0;
    public static int totalSalary = 0;
    public static int totalWorkingDays = 0;
    public static int empHours = 0;
@@ -47,7 +47,7 @@ public class EmpWageComputation
          totalEmpHours = totalEmpHours + empHours;
          totalWorkingDays++;
          empDailyWage[totalWorkingDays]=getCalculationDailyWage(empHours);
-			totalSalary = totalSalary + empDailyWage[totalWorkingDays];
+         totalSalary = totalSalary + empDailyWage[totalWorkingDays];
          System.out.println("Day"+totalWorkingDays+"		"+empDailyWage[totalWorkingDays]+"		"+totalSalary);
       }
          System.out.println("Total salary of employee= " + totalSalary);
