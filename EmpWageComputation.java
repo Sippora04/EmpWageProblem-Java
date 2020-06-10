@@ -6,7 +6,7 @@ public class EmpWageComputation
    public static int totalSalary = 0;
    public static int totalWorkingDays = 0;
    public static int empHours = 0;
-   public static int DailyWage = 0;
+   public static int dailyWage = 0;
 
    public static final int IS_EMP_FULL_TIME = 1;
    public static final int IS_EMP_PART_TIME = 2;
@@ -31,14 +31,14 @@ public class EmpWageComputation
 
    public static int getCalculationDailyWage(int empHours)
    {
-      DailyWage = empHours * EMP_RATE_PER_HOUR;
-      return DailyWage;
+      dailyWage = empHours * EMP_RATE_PER_HOUR;
+      return dailyWage;
    }
 
    public static void getMonthlyWage()
    {
-      int empDailyWage[] = new int[100];
-		System.out.println("Day No.		DailyWage	TotalWage");
+      int empDailyWage[] = new int[25];
+      System.out.println("Day No.      DailyWage   TotalWage");
       while (totalEmpHours < MAXIMUM_WORK_HOURS && totalWorkingDays < WORKING_DAYS_IN_MONTH)
       {
          Random random = new Random();
@@ -48,7 +48,7 @@ public class EmpWageComputation
          totalWorkingDays++;
          empDailyWage[totalWorkingDays]=getCalculationDailyWage(empHours);
          totalSalary = totalSalary + empDailyWage[totalWorkingDays];
-         System.out.println("Day"+totalWorkingDays+"		"+empDailyWage[totalWorkingDays]+"		"+totalSalary);
+         System.out.println("Day"+totalWorkingDays+"     "+empDailyWage[totalWorkingDays]+"     "+totalSalary);
       }
          System.out.println("Total salary of employee= " + totalSalary);
    }
@@ -60,3 +60,5 @@ public class EmpWageComputation
       employee.getMonthlyWage();
    }
 }
+
+
